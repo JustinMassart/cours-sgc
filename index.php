@@ -189,12 +189,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <ul id="flexiselDemo1">
                 <?php foreach ($topGames as $game): ?>
                     <li>
-                        <article class="game-grid">
-                            <h4><?= $game['title'] ?></h4>
-                            <p><?= $game['intro'] ?></p>
-                            <img src="<?= $game['img'] ?>" class="img-responsive"
-                                 alt="<?= 'pochette du jeu : ' . $game['title'] ?>" />
-                        </article>
+                        <?php include('components/topGames.php'); ?>
                     </li>
                 <?php endforeach; ?>
             </ul>
