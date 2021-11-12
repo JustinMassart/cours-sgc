@@ -1,6 +1,63 @@
 <?php
 
-    include('config/socials.php');
+include('config/socials.php');
+
+/*
+
+
+    DESCRIPTION DES JEUX
+
+    <h4>Action Games</h4>
+    <p>Nulla elementum nunc tempus.</p>
+    <img src="images/t1.jpg" class="img-responsive" alt="" />
+
+    <h4>Racing Games</h4>
+    <p>Nulla elementum nunc tempus.</p>
+    <img src="images/t3.jpg" class="img-responsive" alt="" />
+
+    <h4>3D Games</h4>
+    <p>Nulla elementum nunc tempus.</p>
+    <img src="images/t4.jpg" class="img-responsive" alt="" />
+
+    <h4>Arcade Games</h4>
+    <p>Nulla elementum nunc tempus.</p>
+    <img src="images/t2.jpg" class="img-responsive" alt="" />
+
+*/
+
+$topGames = [
+    [
+        'title' => 'Action Games',
+        'intro' => 'Nulla elementum nunc tempus.',
+        'img' => 'images/t1.jpg',
+    ],
+    [
+        'title' => 'Racing Games',
+        'intro' => 'Nulla elementum nunc tempus.',
+        'img' => 'images/t3.jpg',
+    ],
+    [
+        'title' => '3D Games Games',
+        'intro' => 'Nulla elementum nunc tempus.',
+        'img' => 'images/t4.jpg',
+    ],
+    [
+        'title' => 'Arcade Games',
+        'intro' => 'Nulla elementum nunc tempus.',
+        'img' => 'images/t2.jpg',
+    ],
+    [
+        'title' => 'Flight Games',
+        'intro' => 'Nulla elementum nunc tempus.',
+        'img' => 'images/t5.jpg',
+    ],
+    [
+        'title' => '2D Games',
+        'intro' => 'Nulla elementum nunc tempus.',
+        'img' => 'images/t6.jpg',
+    ],
+];
+
 
 ?>
 
@@ -130,34 +187,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         </div>
         <div class="top-game-grids">
             <ul id="flexiselDemo1">
-                <li>
-                    <div class="game-grid">
-                        <h4>Action Games</h4>
-                        <p>Nulla elementum nunc tempus.</p>
-                        <img src="images/t1.jpg" class="img-responsive" alt="" />
-                    </div>
-                </li>
-                <li>
-                    <div class="game-grid">
-                        <h4>Racing Games</h4>
-                        <p>Nulla elementum nunc tempus.</p>
-                        <img src="images/t3.jpg" class="img-responsive" alt="" />
-                    </div>
-                </li>
-                <li>
-                    <div class="game-grid">
-                        <h4>3D Games</h4>
-                        <p>Nulla elementum nunc tempus.</p>
-                        <img src="images/t4.jpg" class="img-responsive" alt="" />
-                    </div>
-                </li>
-                <li>
-                    <div class="game-grid">
-                        <h4>Arcade Games</h4>
-                        <p>Nulla elementum nunc tempus.</p>
-                        <img src="images/t2.jpg" class="img-responsive" alt="" />
-                    </div>
-                </li>
+                <?php foreach ($topGames as $game): ?>
+                    <li>
+                        <article class="game-grid">
+                            <h4><?= $game['title'] ?></h4>
+                            <p><?= $game['intro'] ?></p>
+                            <img src="<?= $game['img'] ?>" class="img-responsive"
+                                 alt="<?= 'pochette du jeu : ' . $game['title'] ?>" />
+                        </article>
+                    </li>
+                <?php endforeach; ?>
             </ul>
             <script type="text/javascript">
                 $(window).load(function () {
