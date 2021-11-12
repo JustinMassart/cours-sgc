@@ -1,29 +1,7 @@
 <?php
 
 include('config/socials.php');
-
-/*
-
-
-    DESCRIPTION DES JEUX
-
-    <h4>Action Games</h4>
-    <p>Nulla elementum nunc tempus.</p>
-    <img src="images/t1.jpg" class="img-responsive" alt="" />
-
-    <h4>Racing Games</h4>
-    <p>Nulla elementum nunc tempus.</p>
-    <img src="images/t3.jpg" class="img-responsive" alt="" />
-
-    <h4>3D Games</h4>
-    <p>Nulla elementum nunc tempus.</p>
-    <img src="images/t4.jpg" class="img-responsive" alt="" />
-
-    <h4>Arcade Games</h4>
-    <p>Nulla elementum nunc tempus.</p>
-    <img src="images/t2.jpg" class="img-responsive" alt="" />
-
-*/
+include('functions.php');
 
 $topGames = [
     [
@@ -189,7 +167,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <ul id="flexiselDemo1">
                 <?php foreach ($topGames as $game): ?>
                     <li>
-                        <?php include('components/topGames.php'); ?>
+                        <?php component('topGames', $game); ?>
                     </li>
                 <?php endforeach; ?>
             </ul>
