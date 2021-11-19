@@ -5,6 +5,7 @@
     include('config/socials.php');
     include('config/topGames.php');
     include('config/latestTop.php');
+    include('config/slider.php');
     include('functions.php');
 
 
@@ -108,30 +109,16 @@
         <div class="slider">
             <div class="callbacks_container">
                 <ul class="rslides" id="slider">
-                    <div class="slid banner1">
-                        <div class="caption">
-                            <h3>Adventure Game - 343 industries - master chief</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec pellentesque ex. Morbi
-                               iaculis
-                               mi in varius auctor. Nullam feugiat erat ex, eu vehicula velit efficitur non.</p>
-                        </div>
-                    </div>
-                    <div class="slid banner2">
-                        <div class="caption">
-                            <h3>God of war - kratos - sony santa monica</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec pellentesque ex. Morbi
-                               iaculis
-                               mi in varius auctor. Nullam feugiat erat ex, eu vehicula velit efficitur non.</p>
-                        </div>
-                    </div>
-                    <div class="slid banner3">
-                        <div class="caption">
-                            <h3>Battlefield 4 - game - explosion - digital illusions</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec pellentesque ex. Morbi
-                               iaculis
-                               mi in varius auctor. Nullam feugiat erat ex, eu vehicula velit efficitur non.</p>
-                        </div>
-                    </div>
+                    <?php
+                        $i = 1;
+                        foreach ($slider as $game): ?>
+                            <div class="slid <?= 'banner' . $i++ ?>">
+                                <div class="caption">
+                                    <h3><?= $game['title'] ?></h3>
+                                    <p><?= $game['intro'] ?></p>
+                                </div>
+                            </div>
+                        <?php endforeach; ?>
                 </ul>
             </div>
         </div>
