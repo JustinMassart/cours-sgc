@@ -1,5 +1,6 @@
 <?php
 
+// ils ont foirés les class du coup les url ne sont pas forcément en accord avec le nom
 
 $socials = [
     'facebook' => 'https://www.facebook.com/',
@@ -8,4 +9,3 @@ $socials = [
     'youtube' => 'https://www.pinterest.com/',
     'pin' => 'https://www.instagram.com/',
 ];
-

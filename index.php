@@ -11,7 +11,7 @@ include('functions.php');
 <!DOCTYPE HTML>
 <html lang="en">
     <head>
-        <title><?= "Gamey • Tous vos jeux en ligne" ?></title>
+        <title><?= "Gamey • Tous vos jeux en ligne"; ?></title>
         <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
         <script src="js/bootstrap.js"></script>
         <link href="css/style.css" rel='stylesheet' type='text/css' />
@@ -38,7 +38,7 @@ include('functions.php');
                             // Boucle qui affiche chaque réseau social (as $network) contenu dans le tableau $socials déclaré dans le fichier socials.php
                             foreach ($socials as $network => $url): ?>
                                 <?php if ($network !== 'gplus'): ?>
-                                    <a href="<?= $url ?>"><i class="<?= $network ?>"></i></a>
+                                    <a href="<?= $url; ?>"><i class="<?= $network;?>"></i></a>
                                 <?php endif; ?>
                             <?php endforeach; ?>
                         </div>
