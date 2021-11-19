@@ -8,7 +8,6 @@ include('functions.php');
 
 
 ?>
-
 <!DOCTYPE HTML>
 <html lang="en">
     <head>
@@ -18,8 +17,8 @@ include('functions.php');
         <link href="css/style.css" rel='stylesheet' type='text/css' />
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta name="keywords" content="Adventure Gaming  Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
-Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+        <meta name="keywords"
+              content="Adventure Gaming  Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
         <script type="application/x-javascript"> addEventListener("load", function () {
                 setTimeout(hideURLbar, 0);
             }, false);
@@ -27,7 +26,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             function hideURLbar() {
                 window.scrollTo(0, 1);
             } </script>
-
         <script src="js/jquery.min.js"></script>
     </head>
     <body>
@@ -37,9 +35,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <div class="headr-left">
                         <div class="social">
                             <?php
-
                             // Boucle qui affiche chaque réseau social (as $network) contenu dans le tableau $socials déclaré dans le fichier socials.php
-
                             foreach ($socials as $network => $url): ?>
                                 <a href="<?= $url ?>"><i class="<?= $network ?>"></i></a>
                             <?php endforeach; ?>
@@ -90,7 +86,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             });
                         });
                     </script>
-
                     <div class="clearfix"></div>
                 </div>
             </div>
@@ -146,15 +141,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <div class="top-game-grids">
                     <ul id="flexiselDemo1">
                         <?php
-
                         // Boucle pour afficher tous les jeux (as $games) contenus dans le tableau $topGames
-
                         foreach ($topGames as $game): ?>
                             <li>
                                 <?php
-
                                 // Au lieu de mettre l'HTML en dur, on le rend dynamic en le transformant en composant (component) qui est déclaré dans le fichier functions.php
-
                                 component('topGames', $game); ?>
                             </li>
                         <?php endforeach; ?>
