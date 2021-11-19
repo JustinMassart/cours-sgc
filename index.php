@@ -191,7 +191,9 @@ include('functions.php');
                 </div>
                 <div class="latest-top">
                     <div class="col-md-5 trailer-text">
-                        <?php foreach ($latestTop as $article): ?>
+                        <?php
+                            // Boucle qui affiche les derniers posts des jeux déclaré dans le fichier "latestTop.php"
+                            foreach ($latestTop as $article): ?>
                             <div class="sub-trailer">
                                 <div class="col-md-4 sub-img">
                                     <img src="<?= $article['img']; ?>" alt="<?= $article['title']; ?>" />
@@ -288,7 +290,8 @@ include('functions.php');
         </div>
         <div class="copywrite">
             <div class="container">
-                <p> © 2020 Adventure Gaming. All rights reserved | Design by <a href="http://w3layouts.com/">W3layouts</a></p>
+                <p> © 2020 Adventure Gaming. All rights reserved | Design by <a
+                            href="http://w3layouts.com/">W3layouts</a></p>
             </div>
         </div>
     </body>
