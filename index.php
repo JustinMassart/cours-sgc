@@ -1,11 +1,11 @@
 <?php
 
-// Inclusion des fichiers requis
+    // Inclusion des fichiers requis
 
-include('config/socials.php');
-include('config/topGames.php');
-include('config/latestTop.php');
-include('functions.php');
+    include('config/socials.php');
+    include('config/topGames.php');
+    include('config/latestTop.php');
+    include('functions.php');
 
 
 ?>
@@ -36,12 +36,12 @@ include('functions.php');
                     <div class="headr-left">
                         <div class="social">
                             <?php
-                            // Boucle qui affiche chaque réseau social (as $network) contenu dans le tableau $socials déclaré dans le fichier socials.php
-                            foreach ($socials as $network => $url): ?>
-                                <?php if ($network !== 'gplus'): ?>
-                                    <a href="<?= $url; ?>"><i class="<?= $network; ?>"></i></a>
-                                <?php endif; ?>
-                            <?php endforeach; ?>
+                                // Boucle qui affiche chaque réseau social (as $network) contenu dans le tableau $socials déclaré dans le fichier socials.php
+                                foreach ($socials as $network => $url): ?>
+                                    <?php if ($network !== 'gplus'): ?>
+                                        <a href="<?= $url; ?>"><i class="<?= $network; ?>"></i></a>
+                                    <?php endif; ?>
+                                <?php endforeach; ?>
                         </div>
                         <div class="search">
                             <form>
@@ -144,14 +144,14 @@ include('functions.php');
                 <div class="top-game-grids">
                     <ul id="flexiselDemo1">
                         <?php
-                        // Boucle pour afficher tous les jeux (as $games) contenus dans le tableau $topGames
-                        foreach ($topGames as $game): ?>
-                            <li>
-                                <?php
-                                // Au lieu de mettre l'HTML en dur, on le rend dynamic en le transformant en composant (component) qui est déclaré dans le fichier functions.php
-                                component('topGames', $game); ?>
-                            </li>
-                        <?php endforeach; ?>
+                            // Boucle pour afficher tous les jeux (as $games) contenus dans le tableau $topGames
+                            foreach ($topGames as $game): ?>
+                                <li>
+                                    <?php
+                                        // Au lieu de mettre l'HTML en dur, on le rend dynamic en le transformant en composant (component) qui est déclaré dans le fichier functions.php
+                                        component('topGames', $game); ?>
+                                </li>
+                            <?php endforeach; ?>
                     </ul>
                     <script type="text/javascript">
                         $(window).load(function () {
@@ -194,17 +194,17 @@ include('functions.php');
                         <?php
                             // Boucle qui affiche les derniers posts des jeux déclaré dans le fichier "latestTop.php"
                             foreach ($latestTop as $article): ?>
-                            <div class="sub-trailer">
-                                <div class="col-md-4 sub-img">
-                                    <img src="<?= $article['img']; ?>" alt="<?= $article['title']; ?>" />
+                                <div class="sub-trailer">
+                                    <div class="col-md-4 sub-img">
+                                        <img src="<?= $article['img']; ?>" alt="<?= $article['title']; ?>" />
+                                    </div>
+                                    <div class="col-md-8 sub-text">
+                                        <a href="#"><?= $article['title']; ?></a>
+                                        <p><?= $article['intro']; ?></p>
+                                    </div>
+                                    <div class="clearfix"></div>
                                 </div>
-                                <div class="col-md-8 sub-text">
-                                    <a href="#"><?= $article['title']; ?></a>
-                                    <p><?= $article['intro']; ?></p>
-                                </div>
-                                <div class="clearfix"></div>
-                            </div>
-                        <?php endforeach; ?>
+                            <?php endforeach; ?>
                     </div>
                     <div class="col-md-7 trailer">
                         <iframe src="https://www.youtube.com/embed/V5-DyoVlNOg?list=PLiVunv1pnIs2c0ORVqY60K3n8XMO9CoGp"
