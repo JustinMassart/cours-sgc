@@ -110,9 +110,8 @@
             <div class="callbacks_container">
                 <ul class="rslides" id="slider">
                     <?php
-                        $i = 1;
                         foreach ($slider as $game): ?>
-                            <div class="slid <?= 'banner' . $i++ ?>">
+                            <div class="slid <?= $game['banner'] ?>">
                                 <div class="caption">
                                     <h3><?= $game['title'] ?></h3>
                                     <p><?= $game['intro'] ?></p>
