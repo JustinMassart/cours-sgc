@@ -37,7 +37,9 @@ include('functions.php');
                             <?php
                             // Boucle qui affiche chaque réseau social (as $network) contenu dans le tableau $socials déclaré dans le fichier socials.php
                             foreach ($socials as $network => $url): ?>
-                                <a href="<?= $url ?>"><i class="<?= $network ?>"></i></a>
+                                <?php if ($network !== 'gplus'): ?>
+                                    <a href="<?= $url ?>"><i class="<?= $network ?>"></i></a>
+                                <?php endif; ?>
                             <?php endforeach; ?>
                         </div>
                         <div class="search">
