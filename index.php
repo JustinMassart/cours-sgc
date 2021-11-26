@@ -8,7 +8,6 @@
     include('config/slider.php');
     include('functions.php');
 
-
 ?>
 <!DOCTYPE HTML>
 <html lang="en">
