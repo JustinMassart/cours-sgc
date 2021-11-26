@@ -4,7 +4,7 @@
 
     include('config/socials.php');
     include('config/topGames.php');
-    include('config/latestTop.php');
+    include('config/latestGames.php');
     include('config/slider.php');
     include('functions.php');
 
@@ -178,15 +178,15 @@
                 <div class="latest-top">
                     <div class="col-md-5 trailer-text">
                         <?php
-                            // Boucle qui affiche les derniers posts des jeux déclaré dans le fichier "latestTop.php"
-                            foreach ($latestTop as $article): ?>
+                            // Boucle qui affiche les derniers posts des jeux déclaré dans le fichier "latestGames.php"
+                            foreach ($latestGames as $article): ?>
                                 <div class="sub-trailer">
                                     <div class="col-md-4 sub-img">
-                                        <img src="<?= $article['img']; ?>" alt="<?= $article['title']; ?>" />
+                                        <img src="<?= $article['img']; ?>" alt="<?= $article['alt']; ?>" />
                                     </div>
                                     <div class="col-md-8 sub-text">
                                         <a href="#"><?= $article['title']; ?></a>
-                                        <p><?= $article['intro']; ?></p>
+                                        <p><?= $article['excerpt']; ?></p>
                                     </div>
                                     <div class="clearfix"></div>
                                 </div>
