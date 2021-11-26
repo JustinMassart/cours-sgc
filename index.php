@@ -124,7 +124,6 @@
             <div class="container">
                 <div class="top-games">
                     <h3>Top Games</h3>
-                    <span></span>
                 </div>
                 <div class="top-game-grids">
                     <ul id="flexiselDemo1">
