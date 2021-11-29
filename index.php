@@ -16,4 +16,4 @@ require_once(CORE_PATH . 'autoload.php');
 
 //  launch example website
 $site = new \SGBD\App();
-$site->boot('gamey');
+$site->boot('Gamey');
