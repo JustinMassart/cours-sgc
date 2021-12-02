@@ -64,11 +64,11 @@
                         <span class="menu"></span>
                         <ul class="nav1">
                             <li class="active"><a href="index.php">Home</a></li>
-                            <li><a href="about.html">About</a></li>
-                            <li><a href="reviews.html">Reviews</a></li>
+                            <li><a href="about.php">About</a></li>
+                            <li><a href="reviews.php">Reviews</a></li>
                             <li><a href="typo.html">News</a></li>
-                            <li><a href="gallery.html">Gallery</a></li>
-                            <li><a href="contact.html">Mail</a></li>
+                            <li><a href="gallery.php">Gallery</a></li>
+                            <li><a href="contact.php">Mail</a></li>
                         </ul>
                     </div>
                     <script>
@@ -201,7 +201,7 @@
                        tempus. Aliquam nec dui dolor. Quisque scelerisque aliquet est et dignissim. Morbi magna quam,
                        molestie
                        sed fermentum et, elementum at dolor</p>
-                    <a class="hvr-bounce-to-bottom" href="reviews.html">Read More</a>
+                    <a class="hvr-bounce-to-bottom" href="reviews.php">Read More</a>
                 </div>
             </div>
         </div>
@@ -216,7 +216,7 @@
                            magna vel
                            tempus.
                            Aliquam nec dui dolor. Quisque scelerisque aliquet est et dignissim.</p>
-                        <a class="hvr-bounce-to-top" href="reviews.html">Read More</a>
+                        <a class="hvr-bounce-to-top" href="reviews.php">Read More</a>
                     </div>
                     <div class="col-md-5 x-box-right">
                         <img src="images/xbox.jpg" class="img-responsive" alt="" />
