@@ -19,18 +19,19 @@
         <script src="js/jquery.min.js"></script>
     </head>
     <body>
+        <!-- header -->
         <div class="top-banner">
             <div class="header">
                 <div class="container">
                     <div class="headr-left">
                         <div class="social">
-                            <?php
-                                // Boucle qui affiche chaque réseau social (as $network) contenu dans le tableau $socials déclaré dans le fichier socials.php
-                                foreach ($socials as $network => $url): ?>
-                                    <?php if ($network !== 'gplus'): ?>
-                                        <a href="<?= $url; ?>"><i class="<?= $network; ?>"></i></a>
-                                    <?php endif; ?>
-                                <?php endforeach; ?>
+
+                            <?php foreach ($socials as $network => $url): ?>
+                                <?php if ($network != 'gplus'): ?>
+                                    <a href="<?= $url; ?>"><i class="<?= $network; ?>"></i></a>
+                                <?php endif; ?>
+                            <?php endforeach; ?>
+
                         </div>
                         <div class="search">
                             <form>
@@ -55,22 +56,24 @@
                     <div class="clearfix"></div>
                 </div>
             </div>
+            <!--banner-info-->
             <div class="banner-info">
                 <div class="container">
                     <div class="logo">
-                        <h1><a href="index.php">Adventure Gaming</a></h1>
+                        <h1><a href="index.html">Adventure Gaming</a></h1>
                     </div>
                     <div class="top-menu">
                         <span class="menu"></span>
                         <ul class="nav1">
-                            <li class="active"><a href="index.php">Home</a></li>
-                            <li><a href="about.php">About</a></li>
-                            <li><a href="reviews.php">Reviews</a></li>
+                            <li class="active"><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="reviews.html">Reviews</a></li>
                             <li><a href="typo.html">News</a></li>
-                            <li><a href="gallery.php">Gallery</a></li>
-                            <li><a href="contact.php">Mail</a></li>
+                            <li><a href="gallery.html">Gallery</a></li>
+                            <li><a href="contact.html">Mail</a></li>
                         </ul>
                     </div>
+                    <!-- script-for-menu -->
                     <script>
                         $("span.menu").click(function () {
                             $("ul.nav1").slideToggle(300, function () {
@@ -78,10 +81,14 @@
                             });
                         });
                     </script>
+                    <!-- /script-for-menu -->
+
                     <div class="clearfix"></div>
                 </div>
             </div>
         </div>
+        <!-- banner -->
+        <!-- Slider-starts-Here -->
         <script src="js/responsiveslides.min.js"></script>
         <script>
             $(function () {
@@ -93,44 +100,60 @@
                     pager: true,
                 });
             });
+
         </script>
         <div class="slider">
             <div class="callbacks_container">
                 <ul class="rslides" id="slider">
-                    <?php
-                        foreach ($slider as $game): ?>
-                            <div class="slid <?= $game['banner'] ?>">
-                                <div class="caption">
-                                    <h3><?= $game['title'] ?></h3>
-                                    <p><?= $game['intro'] ?></p>
-                                </div>
-                            </div>
-                        <?php endforeach; ?>
+                    <div class="slid banner1">
+                        <div class="caption">
+                            <h3>Adventure Game - 343 industries - master chief</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec pellentesque ex. Morbi
+                               iaculis mi in varius auctor. Nullam feugiat erat ex, eu vehicula velit efficitur non.</p>
+                        </div>
+                    </div>
+
+
+                    <div class="slid banner2">
+                        <div class="caption">
+                            <h3>God of war - kratos - sony santa monica</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec pellentesque ex. Morbi
+                               iaculis mi in varius auctor. Nullam feugiat erat ex, eu vehicula velit efficitur non.</p>
+                        </div>
+                    </div>
+
+
+                    <div class="slid banner3">
+                        <div class="caption">
+                            <h3>Battlefield 4 - game - explosion - digital illusions</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec pellentesque ex. Morbi
+                               iaculis mi in varius auctor. Nullam feugiat erat ex, eu vehicula velit efficitur non.</p>
+                        </div>
+                    </div>
                 </ul>
             </div>
         </div>
+        <!-- content -->
         <div class="content">
             <div class="container">
                 <div class="top-games">
                     <h3>Top Games</h3>
+                    <span></span>
                 </div>
                 <div class="top-game-grids">
                     <ul id="flexiselDemo1">
-                        <?php
-                            // Boucle pour afficher tous les jeux (as $games) contenus dans le tableau $topGames
-                            foreach ($topGames as $game): ?>
-                                <li>
-                                    <article class="game-grid">
-                                        <h4><?= $game['title'] ?></h4>
-                                        <p><?= $game['excerpt'] ?></p>
-                                        <a href="<?= $game['url'] ?>">
-                                            <img src="<?= $game['img'] ?>" class="img-responsive"
-                                                 alt="<?= $game['alt'] ?>" width="243" height="343" />
-                                        </a>
-                                    </article>
-                                </li>
-                            <?php endforeach; ?>
+                        <?php foreach ($games as $game): ?>
+                            <li>
+                                <div class="game-grid">
+                                    <h4><?= $game->title; ?></h4>
+                                    <p><?= $game->description; ?></p>
+                                    <img src="<?= $game->cover; ?>" class="img-responsive"
+                                         alt="<?= $game->alt; ?>" />
+                                </div>
+                            </li>
+                        <?php endforeach; ?>
                     </ul>
+
                     <script type="text/javascript">
                         $(window).load(function () {
                             $("#flexiselDemo1").flexisel({
@@ -161,6 +184,7 @@
                 </div>
             </div>
         </div>
+        <!-- latest -->
         <div class="latest">
             <div class="container">
                 <div class="latest-games">
@@ -169,20 +193,18 @@
                 </div>
                 <div class="latest-top">
                     <div class="col-md-5 trailer-text">
-                        <?php
-                            // Boucle qui affiche les derniers posts des jeux déclaré dans le fichier "latestGames.php"
-                            foreach ($articles as $article): ?>
-                                <div class="sub-trailer">
-                                    <div class="col-md-4 sub-img">
-                                        <img src="<?= $article['img']; ?>" alt="<?= $article['alt']; ?>" />
-                                    </div>
-                                    <div class="col-md-8 sub-text">
-                                        <a href="#"><?= $article['title']; ?></a>
-                                        <p><?= $article['excerpt']; ?></p>
-                                    </div>
-                                    <div class="clearfix"></div>
+                        <?php foreach ($articles as $article): ?>
+                            <div class="sub-trailer">
+                                <div class="col-md-4 sub-img">
+                                    <img src="<?= $article['image']; ?>" alt="<?= $article['alt']; ?>" />
                                 </div>
-                            <?php endforeach; ?>
+                                <div class="col-md-8 sub-text">
+                                    <a href="#"><?= $article['title']; ?></a>
+                                    <p><?= $article['excerpt']; ?></p>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                        <?php endforeach; ?>
                     </div>
                     <div class="col-md-7 trailer">
                         <iframe src="https://www.youtube.com/embed/V5-DyoVlNOg?list=PLiVunv1pnIs2c0ORVqY60K3n8XMO9CoGp"
@@ -192,6 +214,7 @@
                 </div>
             </div>
         </div>
+        <!-- poster -->
         <div class="poster">
             <div class="container">
                 <div class="poster-info">
@@ -199,12 +222,12 @@
                     <p>Proin ornare metus eros, quis mattis lorem venenatis eget. Curabitur eget dui euismod,
                        varius nisl eu, pharetra lacus. Sed vehicula tempor leo. Aenean dictum suscipit magna vel
                        tempus. Aliquam nec dui dolor. Quisque scelerisque aliquet est et dignissim. Morbi magna quam,
-                       molestie
-                       sed fermentum et, elementum at dolor</p>
-                    <a class="hvr-bounce-to-bottom" href="reviews.php">Read More</a>
+                       molestie sed fermentum et, elementum at dolor</p>
+                    <a class="hvr-bounce-to-bottom" href="reviews.html">Read More</a>
                 </div>
             </div>
         </div>
+        <!-- x-box -->
         <div class="x-box">
             <div class="container">
                 <div class="x-box_sec">
@@ -213,10 +236,9 @@
                         <h3>Suspendisse ornare nisl et tellus convallis, non vehicula nibh convallis.</h3>
                         <p>Proin ornare metus eros, quis mattis lorem venenatis eget. Curabitur eget dui
                            euismod, varius nisl eu, pharetra lacus. Sed vehicula tempor leo. Aenean dictum suscipit
-                           magna vel
-                           tempus.
+                           magna vel tempus.
                            Aliquam nec dui dolor. Quisque scelerisque aliquet est et dignissim.</p>
-                        <a class="hvr-bounce-to-top" href="reviews.php">Read More</a>
+                        <a class="hvr-bounce-to-top" href="reviews.html">Read More</a>
                     </div>
                     <div class="col-md-5 x-box-right">
                         <img src="images/xbox.jpg" class="img-responsive" alt="" />
@@ -225,6 +247,7 @@
                 </div>
             </div>
         </div>
+        <!-- footer -->
         <div class="footer">
             <div class="container">
                 <div class="footer-grids">
@@ -266,11 +289,13 @@
                 </div>
             </div>
         </div>
+        <!---->
         <div class="copywrite">
             <div class="container">
                 <p> © 2020 Adventure Gaming. All rights reserved | Design by <a
                             href="http://w3layouts.com/">W3layouts</a></p>
             </div>
         </div>
+        <!---->
     </body>
 </html>

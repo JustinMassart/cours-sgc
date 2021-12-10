@@ -1,17 +1,30 @@
 <?php
 
-    namespace SGBD\Sites\Gamey\Controllers;
+namespace SGBD\Sites\Gamey\Controllers;
 
-    use SGBD\App;
-
-    class GameController
+class GameController
+{
+    public function show($slug)
     {
+        $game = \SGBD\Sites\Gamey\Models\Game::getOne(['slug' => $slug]);
 
-        public function show()
-        {
-            // Controller l'affichage de la page d'un jeu.
-
-
+        if(! $game) {
+            echo '404 - Game not found';
+            return;
         }
 
+        $game->published_at = new \DateTime($game->published_at);
+
+        return \SGBD\App::getView('game', [
+            'title' => 'Détails pour le jeu ' . $game->title,
+            'socials' => [
+                'twitter' => 'https://twitter.com',
+                'facebook' => 'https://facebook.com',
+                'gplus' => 'https://google.com/plus',
+                'youtube' => 'https://pinterest.com',
+                'pin' => 'https://instagram.com',
+            ],
+            'game' => $game,
+        ]);
     }
+}

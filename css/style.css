@@ -2,13 +2,12 @@
 Author: W3layout
 Author URL: http://w3layouts.com
 */
-
 h4, h5, h6,
 h1, h2, h3 {margin: 0;}
 ul, ol {margin: 0; padding:0;}
 p {margin: 0;}
 html, body{
-	font-family: 'OpenSans-Regular';
+    font-family: 'OpenSans-Regular', serif;
 	font-size: 100%;
 	background: #ffffff;
 }

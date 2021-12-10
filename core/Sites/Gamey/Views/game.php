@@ -5,13 +5,12 @@ Author URL: http://w3layouts.com
 <!DOCTYPE HTML>
 <html>
     <head>
-        <title>Adventure Gaming a Games a Category Flat Bootstarp Responsive Website Template | Single ::
-               w3layouts</title>
-        <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
+        <title><?= $title; ?></title>
+        <link href="/css/bootstrap.css" rel='stylesheet' type='text/css' />
         <!-- jQuery (necessary JavaScript plugins) -->
-        <script src="js/bootstrap.js"></script>
+        <script src="/js/bootstrap.js"></script>
         <!-- Custom Theme files -->
-        <link href="css/style.css" rel="stylesheet" type="text/css" />
+        <link href="/css/style.css" rel='stylesheet' type='text/css' />
         <!-- Custom Theme files -->
         <!--//theme-style-->
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -26,7 +25,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 window.scrollTo(0, 1);
             } </script>
 
-        <script src="js/jquery.min.js"></script>
+        <script src="/js/jquery.min.js"></script>
 
     </head>
     <body>
@@ -35,11 +34,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <div class="container">
                 <div class="headr-left">
                     <div class="social">
-                        <a href="#"><i class="facebook"></i></a>
-                        <a href="#"><i class="twitter"></i></a>
-                        <a href="#"><i class="gplus"></i></a>
-                        <a href="#"><i class="pin"></i></a>
-                        <a href="#"><i class="youtube"></i></a>
+                        <?php foreach ($socials as $network => $url): ?>
+                            <a href="<?= $url; ?>"><i class="<?= $network; ?>"></i></a>
+                        <?php endforeach; ?>
                     </div>
                     <div class="search">
                         <form>
@@ -67,17 +64,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <div class="banner-info">
             <div class="container">
                 <div class="logo">
-                    <h1><a href="index.php">Adventure Gaming</a></h1>
+                    <h1><a href="index.html"><?= $game->title; ?></a></h1>
                 </div>
                 <div class="top-menu">
                     <span class="menu"></span>
                     <ul class="nav1">
-                        <li><a href="index.php">Home</a></li>
-                        <li><a href="about.php">About</a></li>
-                        <li class="active"><a href="reviews.php">Reviews</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li class="active"><a href="reviews.html">Reviews</a></li>
                         <li><a href="typo.html">News</a></li>
-                        <li><a href="gallery.php">Gallery</a></li>
-                        <li><a href="contact.php">Mail</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Mail</a></li>
                     </ul>
                 </div>
                 <!-- script-for-menu -->
@@ -103,30 +100,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <div class="col-md-8 blog-left">
                     <div class="blog-info">
                         <div class="blog-info-text">
-                            <div class="blog-img">
-                                <img src="images/img12.jpg" alt="" />
-                            </div>
-                            <p class="snglp">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                             tempor If you are going to use a passage of Lorem Ipsum,
-                                             you need to be sure there isn't anything embarrassing hidden in the middle
-                                             of text.
-                                             There are many variations of passages of Lorem Ipsum available, but the
-                                             majority have suffered alteration
-                                             in some form, by injected humour, or randomised words which don't look even
-                                             slightly believable. If you are going to use a passage of Lorem Ipsum,
-                                             you need to be sure there isn't anything embarrassing hidden in the middle
-                                             of text.</p>
-                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have
-                               suffered alteration
-                               in some form, by injected humour, or randomised words which don't look even slightly
-                               believable. If you are going to use a passage of Lorem Ipsum,
-                               you need to be sure there isn't anything embarrassing hidden in the middle of text.</p>
+                            <?php if ($game->cover): ?>
+                                <div class="blog-img">
+                                    <img src="<?= $game->cover; ?>" alt="<?= $game->alt; ?>" />
+                                </div>
+                            <?php endif; ?>
+                            <p class="snglp"><?= $game->description; ?></p>
                         </div>
                         <div class="comment-icons">
                             <ul>
-                                <li><span></span><a href="#">Lorem ipsum dolor sit</a></li>
-                                <li><span class="clndr"></span>MARCH 1, 2013</li>
-                                <li><span class="admin"></span> <a href="#">Admin</a></li>
+                                <li><span></span><a href="#"><?= $game->category; ?></a></li>
+                                <li><span class="clndr"></span><?= $game->published_at->format('j F Y'); ?></li>
+                                <li><span class="admin"></span> <a href="#"><?= $game->editor; ?></a></li>
                                 <li><span class="cmnts"></span> <a href="#">5 comments</a></li>
                                 <li><a href="#" class="like">15</a></li>
                             </ul>
@@ -146,7 +131,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                                     <ul>
                                         <li>MARCH 21, 2013</li>
-                                        <li><a href="single.php">Reply</a></li>
+                                        <li><a href="single.html">Reply</a></li>
                                     </ul>
                                     <div class="media response-info">
                                         <div class="media-left response-text-left">
@@ -161,7 +146,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                                sed do eiusmod tempor incididunt ut labore et.</p>
                                             <ul>
                                                 <li>MARCH 21, 2014</li>
-                                                <li><a href="single.php">Reply</a></li>
+                                                <li><a href="single.html">Reply</a></li>
                                             </ul>
                                         </div>
                                         <div class="clearfix"></div>
@@ -182,7 +167,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                                     <ul>
                                         <li>MARCH 21, 2013</li>
-                                        <li><a href="single.php">Reply</a></li>
+                                        <li><a href="single.html">Reply</a></li>
                                     </ul>
                                 </div>
                                 <div class="clearfix"></div>
@@ -209,41 +194,41 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <div class="category blog-ctgry">
                         <h4>Top Games</h4>
                         <div class="list-group">
-                            <a href="single.php" class="list-group-item">Cras justo odio</a>
-                            <a href="single.php" class="list-group-item">Dapibus ac facilisis in</a>
-                            <a href="single.php" class="list-group-item">Morbi leo risus</a>
-                            <a href="single.php" class="list-group-item">Porta ac consectetur ac</a>
-                            <a href="single.php" class="list-group-item">Vestibulum at eros</a>
-                            <a href="single.php" class="list-group-item">Cras justo odio</a>
-                            <a href="single.php" class="list-group-item">Cras justo odio</a>
-                            <a href="single.php" class="list-group-item">Cras justo odio</a>
+                            <a href="single.html" class="list-group-item">Cras justo odio</a>
+                            <a href="single.html" class="list-group-item">Dapibus ac facilisis in</a>
+                            <a href="single.html" class="list-group-item">Morbi leo risus</a>
+                            <a href="single.html" class="list-group-item">Porta ac consectetur ac</a>
+                            <a href="single.html" class="list-group-item">Vestibulum at eros</a>
+                            <a href="single.html" class="list-group-item">Cras justo odio</a>
+                            <a href="single.html" class="list-group-item">Cras justo odio</a>
+                            <a href="single.html" class="list-group-item">Cras justo odio</a>
                         </div>
                     </div>
                     <div class="recent-posts">
                         <h4>Recent posts</h4>
                         <div class="recent-posts-info">
                             <div class="posts-left sngl-img">
-                                <a href="single.php"> <img src="images/img16.jpg" class="img-responsive zoom-img"
-                                                           alt="" /> </a>
+                                <a href="single.html"> <img src="images/img16.jpg" class="img-responsive zoom-img"
+                                                            alt="" /> </a>
                             </div>
                             <div class="posts-right">
                                 <label>March 5, 2020</label>
-                                <h5><a href="single.php">Finibus Bonorum</a></h5>
+                                <h5><a href="single.html">Finibus Bonorum</a></h5>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing incididunt.</p>
-                                <a href="single.php" class="btn btn-primary hvr-rectangle-in">Read More</a>
+                                <a href="single.html" class="btn btn-primary hvr-rectangle-in">Read More</a>
                             </div>
                             <div class="clearfix"></div>
                         </div>
                         <div class="recent-posts-info">
                             <div class="posts-left sngl-img">
-                                <a href="single.php"> <img src="images/img17.jpg" class="img-responsive zoom-img"
-                                                           alt="" /></a>
+                                <a href="single.html"> <img src="images/img17.jpg" class="img-responsive zoom-img"
+                                                            alt="" /></a>
                             </div>
                             <div class="posts-right">
                                 <label>March 1, 2020</label>
-                                <h5><a href="single.php">Finibus Bonorum</a></h5>
+                                <h5><a href="single.html">Finibus Bonorum</a></h5>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing incididunt.</p>
-                                <a href="single.php" class="btn btn-primary hvr-rectangle-in">Read More</a>
+                                <a href="single.html" class="btn btn-primary hvr-rectangle-in">Read More</a>
                             </div>
                             <div class="clearfix"></div>
                         </div>
