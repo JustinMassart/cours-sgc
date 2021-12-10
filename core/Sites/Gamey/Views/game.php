@@ -1,14 +1,10 @@
-<!--A Design by W3layouts
-Author: W3layout
-Author URL: http://w3layouts.com
--->
 <!DOCTYPE HTML>
 <html lang="en">
     <head>
-        <title><?= "Gamey • Tous vos jeux en ligne"; ?></title>
-        <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
-        <script src="js/bootstrap.js"></script>
-        <link href="css/style.css" rel='stylesheet' type='text/css' />
+        <title><?= $title ?></title>
+        <link href="../../../../cours-sgc/css/bootstrap.css" rel='stylesheet' type='text/css' />
+        <script src="../../../../cours-sgc/js/bootstrap.js"></script>
+        <link href="../../../../cours-sgc/css/style.css" rel='stylesheet' type='text/css' />
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="keywords"
@@ -20,7 +16,7 @@ Author URL: http://w3layouts.com
             function hideURLbar() {
                 window.scrollTo(0, 1);
             } </script>
-        <script src="js/jquery.min.js"></script>
+        <script src="../../../../cours-sgc/js/jquery.min.js"></script>
     </head>
     <body>
         <!-- header -->
