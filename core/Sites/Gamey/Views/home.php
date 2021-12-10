@@ -2,9 +2,9 @@
 <html lang="en">
     <head>
         <title><?= "Gamey • Tous vos jeux en ligne"; ?></title>
-        <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
-        <script src="js/bootstrap.js"></script>
-        <link href="css/style.css" rel='stylesheet' type='text/css' />
+        <link href="<?= url('css/bootstrap.css') ?>" rel='stylesheet' type='text/css' />
+        <script src="<?= url('js/bootstrap.js') ?>"></script>
+        <link href="<?= url('css/style.css') ?>" rel='stylesheet' type='text/css' />
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="keywords"
@@ -16,7 +16,7 @@
             function hideURLbar() {
                 window.scrollTo(0, 1);
             } </script>
-        <script src="js/jquery.min.js"></script>
+        <script src="<?= url('js/jquery.min.js') ?>"></script>
     </head>
     <body>
         <!-- header -->
@@ -147,7 +147,7 @@
                                 <div class="game-grid" style="position: relative;">
                                     <h4><?= $game->title; ?></h4>
                                     <p><?= $game->description; ?></p>
-                                    <img src="<?= $game->cover; ?>" class="img-responsive"
+                                    <img src="<?= url($game->cover); ?>" class="img-responsive"
                                          alt="<?= $game->alt; ?>" />
                                     <a style="position: absolute; top: 0; right: 0; left: 0; bottom: 0; z-index: 0;"
                                        href="<?= game_url($game) ?>"><span

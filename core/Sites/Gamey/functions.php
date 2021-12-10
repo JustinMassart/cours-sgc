@@ -1,11 +1,12 @@
 <?php
 
-    function game_url($game)
+
+    function url($uri)
     {
-        return '/cours-sgc/games/' . $game->slug;
+        return (new \SGBD\Routes\Request())->getBase() . ltrim($uri, '/');
     }
 
-    function path()
+    function game_url($game)
     {
-        return '/cours-sgc/';
+        return url('/games/' . $game->slug);
     }
