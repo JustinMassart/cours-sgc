@@ -9,8 +9,7 @@ class GameController
         $game = \SGBD\Sites\Gamey\Models\Game::getOne(['slug' => $slug]);
 
         if(! $game) {
-            echo '404 - Game not found';
-            return;
+            return '404 - Game not found';
         }
 
         $game->published_at = new \DateTime($game->published_at);

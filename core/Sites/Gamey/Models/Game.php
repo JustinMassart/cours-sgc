@@ -34,7 +34,8 @@
                 'SELECT `images`.`src` AS `cover`,
                 `images`.`alt`,
                 `games`.`title`,
-                `games`.`description`
+                `games`.`description`,
+                `games`.`slug`
             FROM `games`
             LEFT JOIN `images` ON `games`.`cover_id` = `images`.`id`
             LEFT JOIN `game_user` ON `game_user`.`game_id` = `games`.`id`

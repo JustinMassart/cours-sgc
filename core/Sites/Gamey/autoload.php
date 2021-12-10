@@ -7,6 +7,7 @@
  *
  * ****************************************************/
 
+require_once(SITE_PATH . 'functions.php');
 require_once(SITE_PATH . 'Site.php');
 require_once(SITE_PATH . 'Controllers/HomeController.php');
 require_once(SITE_PATH . 'Controllers/GameController.php');

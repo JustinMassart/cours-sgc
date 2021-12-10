@@ -144,11 +144,14 @@
                     <ul id="flexiselDemo1">
                         <?php foreach ($games as $game): ?>
                             <li>
-                                <div class="game-grid">
+                                <div class="game-grid" style="position: relative;">
                                     <h4><?= $game->title; ?></h4>
                                     <p><?= $game->description; ?></p>
                                     <img src="<?= $game->cover; ?>" class="img-responsive"
                                          alt="<?= $game->alt; ?>" />
+                                    <a style="position: absolute; top: 0; right: 0; left: 0; bottom: 0; z-index: 0;"
+                                       href="<?= game_url($game) ?>"><span
+                                                style="visibility: hidden;">Voir l'affiche du jeu "<?= $game->title ?>"</span></a>
                                 </div>
                             </li>
                         <?php endforeach; ?>

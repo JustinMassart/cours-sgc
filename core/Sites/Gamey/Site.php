@@ -13,7 +13,7 @@ class Site extends BaseSite
 {
     protected $routes = [
         '/' => ['name' => 'home', 'controller' => 'HomeController', 'method' => 'show'],
-        '/games/{slug}' => ['name' => 'game', 'controller' => 'GameController', 'method' => 'show']
+        '/cours-sgc/games/{slug}' => ['name' => 'game', 'controller' => 'GameController', 'method' => 'show']
     ];
 
     protected function boot(){

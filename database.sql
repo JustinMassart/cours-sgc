@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost:8889
--- Généré le : ven. 10 déc. 2021 à 10:03
+-- Généré le : ven. 10 déc. 2021 à 10:10
 -- Version du serveur :  5.7.32
 -- Version de PHP : 8.0.0
 
@@ -102,15 +102,15 @@ INSERT INTO `game_user` (`id`, `game_id`, `user_id`, `rate`, `comment`, `created
 --
 
 INSERT INTO `images` (`id`, `game_id`, `src`, `alt`, `created_at`, `updated_at`) VALUES
-(1, 6, '/sgc-projet/images/gl2.jpg', 'Couverture du jeu Angry Birds', '2021-12-03 10:01:01', '2021-12-03 10:01:01'),
-(2, 5, '/sgc-projet/images/gl6.jpg', 'Couverture du jeu God of War', '2021-12-03 10:49:47', '2021-12-03 10:49:47'),
-(3, 1, '/sgc-projet/images/r4.jpg', 'Couverture du jeu NOVA', '2021-12-03 11:11:05', '2021-12-03 11:11:05'),
-(4, 2, '/sgc-projet/images/gl7.jpg', 'Couverture du jeu Call Of Duty', '2021-12-03 11:12:15', '2021-12-03 11:12:15'),
-(5, 3, '/sgc-projet/images/t3.jpg', 'Couverture du jeu Need for Speed', '2021-12-03 11:13:02', '2021-12-03 11:13:02'),
-(6, 4, '/sgc-projet/images/gl5.jpg', 'Couverture du jeu Star Wars', '2021-12-03 11:14:03', '2021-12-03 11:14:03'),
-(7, 7, '/sgc-projet/images/r6.jpg', 'Couverture du jeu FIFA15', '2021-12-03 11:14:57', '2021-12-03 11:14:57'),
-(8, 8, '/sgc-projet/images/r3.jpg', 'Couverture du jeu Resident Evil', '2021-12-03 11:16:14', '2021-12-03 11:16:14'),
-(9, 9, '/sgc-projet/images/gl11.jpg', 'Couverture du jeu Transformers', '2021-12-03 11:17:14', '2021-12-03 11:17:14');
+(1, 6, '/cours-sgc/images/gl2.jpg', 'Couverture du jeu Angry Birds', '2021-12-03 10:01:01', '2021-12-03 10:01:01'),
+(2, 5, '/cours-sgc/images/gl6.jpg', 'Couverture du jeu God of War', '2021-12-03 10:49:47', '2021-12-03 10:49:47'),
+(3, 1, '/cours-sgc/images/r4.jpg', 'Couverture du jeu NOVA', '2021-12-03 11:11:05', '2021-12-03 11:11:05'),
+(4, 2, '/cours-sgc/images/gl7.jpg', 'Couverture du jeu Call Of Duty', '2021-12-03 11:12:15', '2021-12-03 11:12:15'),
+(5, 3, '/cours-sgc/images/t3.jpg', 'Couverture du jeu Need for Speed', '2021-12-03 11:13:02', '2021-12-03 11:13:02'),
+(6, 4, '/cours-sgc/images/gl5.jpg', 'Couverture du jeu Star Wars', '2021-12-03 11:14:03', '2021-12-03 11:14:03'),
+(7, 7, '/cours-sgc/images/r6.jpg', 'Couverture du jeu FIFA15', '2021-12-03 11:14:57', '2021-12-03 11:14:57'),
+(8, 8, '/cours-sgc/images/r3.jpg', 'Couverture du jeu Resident Evil', '2021-12-03 11:16:14', '2021-12-03 11:16:14'),
+(9, 9, '/cours-sgc/images/gl11.jpg', 'Couverture du jeu Transformers', '2021-12-03 11:17:14', '2021-12-03 11:17:14');
 
 --
 -- Déchargement des données de la table `platforms`
